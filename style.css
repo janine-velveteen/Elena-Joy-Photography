@@ -198,11 +198,17 @@ nav {
   }
 }
 
+.burger,
+.menu-check {
+  display: none;
+}
+
 /*Media Queries */
 
 @media screen and (max-width: 850px) {
   .burger {
     position: relative;
+    display: block;
   }
 
   .burger span {
@@ -210,6 +216,7 @@ nav {
     background: var(--grey-text-color);
     margin: 0.5rem 0rem;
     display: block;
+    transition: all 0.5s ease;
   }
 
   .nav-links a {
@@ -229,6 +236,7 @@ nav {
     transition: transform 1s ease;
   }
   .menu-check {
+    display: block;
     position: absolute;
     top: 50%;
     right: 5%;
@@ -244,5 +252,15 @@ nav {
   }
   .menu-check:checked ~ .burger span {
     background: white;
+  }
+
+  .menu-check:checked ~ .burger span:nth-child(1) {
+    transform: rotateZ(45deg) translateY(300%);
+  }
+  .menu-check:checked ~ .burger span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-check:checked ~ .burger span:nth-child(3) {
+    transform: rotateZ(-45deg) translateY(-300%);
   }
 }

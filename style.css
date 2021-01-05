@@ -23,6 +23,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
   --header1: calc(2rem + 1vw);
   --header2: calc(3.5rem + 1vw);
   --header3: calc(3rem + 1vw);
@@ -88,8 +89,11 @@ h1 {
 
 .main-head {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-  z-index: 2;
-  position: relative;
+
+  position: sticky;
+  top: 0%;
+  z-index: 25;
+  background-color: white;
 }
 
 nav {
@@ -333,6 +337,28 @@ nav {
   flex: 1 1 40rem;
 }
 
+/* Footer Section */
+
+footer {
+  background: var(--background-color);
+  color: white;
+  display: flex;
+  padding: 3rem 5%;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer h4 {
+  flex: 6 1 40rem;
+  font-size: calc(1.8rem + 1vw);
+}
+
 /*Media Queries */
 
 @media screen and (max-width: 850px) {
@@ -411,6 +437,9 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
   .gallery-header {
+    display: none;
+  }
+  .contact img {
     display: none;
   }
 }

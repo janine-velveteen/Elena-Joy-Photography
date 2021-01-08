@@ -362,74 +362,75 @@ footer h4 {
 /*Media Queries */
 
 @media screen and (max-width: 850px) {
-  .hero {
-    width: 100%;
-  }
+}
+.hero {
+  width: 100%;
+}
 
-  /* BURGER NAV BAR */
-  .burger {
-    position: relative;
-    display: block;
-  }
+/* BURGER NAV BAR */
+.burger {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
 
-  .burger span {
-    padding: 0.2rem 2rem;
-    background: var(--grey-text-color);
-    margin: 0.5rem 0rem;
-    display: block;
-    transition: all 0.5s ease;
-  }
+.burger span {
+  padding: 0.2rem 2rem;
+  background: var(--grey-text-color);
+  margin: 0.5rem 0rem;
+  display: block;
+  transition: all 0.5s ease;
+}
 
-  .nav-links a {
-    color: white;
-    font-size: var(--header3);
-    text-decoration: underline;
-  }
-  .nav-links {
-    background: var(--background-color);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 100%;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 1s ease;
-  }
+.nav-links a {
+  color: white;
+  font-size: var(--header3);
+  text-decoration: underline;
+}
+.nav-links {
+  background: var(--background-color);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 1s ease;
+}
 
-  .nav-open {
-    transform: translate(-100%);
-  }
-  .toggle .line1 {
-    transform: rotateZ(45deg) translateY(300%);
-    background-color: white;
-  }
-  .toggle .line2 {
-    opacity: 0;
-  }
+.nav-open {
+  transform: translate(-100%);
+}
+.toggle .line1 {
+  transform: rotateZ(45deg) translateY(300%);
+  background-color: white;
+}
+.toggle .line2 {
+  opacity: 0;
+}
 
-  .toggle .line3 {
-    transform: rotateZ(-45deg) translateY(-300%);
-    background: white;
-  }
-  /* About Section */
-  .about-text div {
-    padding: 3rem 3rem;
-  }
-  /* Gallery Section */
-  .gallery img {
-    grid-row: auto;
-    grid-column: auto;
-  }
-  .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  }
-  .gallery-header {
-    display: none;
-  }
-  .contact img {
-    display: none;
-  }
+.toggle .line3 {
+  transform: rotateZ(-45deg) translateY(-300%);
+  background: white;
+}
+/* About Section */
+.about-text div {
+  padding: 3rem 3rem;
+}
+/* Gallery Section */
+.gallery img {
+  grid-row: auto;
+  grid-column: auto;
+}
+.gallery {
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+.gallery-header {
+  display: none;
+}
+.contact img {
+  display: none;
 }
 
 @media screen and (min-width: 1700px) {
